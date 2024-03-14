@@ -1,10 +1,10 @@
-export default function hasValuesFromArray(set, list) {
-  let harr = true;
-  list.map((x) => {
-    if (!set.has(x)) {
-      harr = false;
+const hasValuesFromArray = (set, array) => {
+  for (const item of array) {
+    if (!set.has(item)) {
+      return false;
     }
-  });
+  }
+  return true;
+};
 
-  return harr;
-}
+export default hasValuesFromArray;
